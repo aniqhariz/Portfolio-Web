@@ -2,10 +2,17 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Portfolio — Interactive Turntable & Creative Archive',
+  title: 'Aniq Hariz Afief | Portfolio',
   description:
     'An interactive personal album and creative developer portfolio inspired by physical vinyl record playback and minimalist editorial design.',
   keywords: ['Portfolio', 'Creative Developer', 'Three.js', 'WebGL', 'Vinyl Record', 'Interactive Audio'],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
