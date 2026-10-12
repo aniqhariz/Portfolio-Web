@@ -19,7 +19,7 @@ export const portfolioSections: SectionData[] = [
     headline: 'Where Curiosity Meets Code and Thoughtful Design.',
     subheadline:  'Informatics Student at Gunadarma University',
     description:
-      'Hi my name is Aniq Hariz Afief, i am an Informatics student with a curiosity for technology and a passion for creating things that feel different. I enjoy exploring the intersection of code, design, and digital experiences.',
+      'Hi, my name is Aniq Hariz Afief. I am an Informatics student with a curiosity for technology and a passion for creating things that feel different. I enjoy exploring the intersection of code, design, and digital experiences.',
     metadata: [],
     modalActionLabel: 'Read More About Me',
   },
@@ -33,7 +33,7 @@ export const portfolioSections: SectionData[] = [
     description:
       'I enjoy working across code and design, combining technical problem-solving with a strong interest in visual details. For me, good work is not just about making things look right, but making them work right.',
     metadata: [],
-    modalActionLabel: 'View My Skills & Tool',
+    modalActionLabel: 'View My Skills & Tools',
   },
   {
     id: 'works',
@@ -308,7 +308,7 @@ export const experienceData: ExperienceItem[] = [
 ];
 
 export const contactData: ContactInfo = {
-  email: 'info@harizafief.xyz',
+  email: 'cieproduktif12@gmail.com',
   availability: 'Open for projects, collaborations, or simply connecting',
   location: 'Indonesia · Open to remote opportunities',
   note: 'Good ideas often start with a conversation. Whether you want to collaborate, discuss a project, or simply connect, feel free to reach out.',

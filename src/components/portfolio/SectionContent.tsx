@@ -11,7 +11,7 @@ interface SectionContentProps {
   volumeControl?: React.ReactNode;
 }
 
-export function SectionContent({ section, onOpenModal, volumeControl }: SectionContentProps) {
+export function SectionContent({ section, onOpenModal }: SectionContentProps) {
   return (
     <div className="w-full flex flex-col justify-center py-4 lg:py-8 pr-0 lg:pr-8 min-h-[360px] lg:min-h-[460px]">
       <AnimatePresence mode="wait">
@@ -21,36 +21,34 @@ export function SectionContent({ section, onOpenModal, volumeControl }: SectionC
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -14 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-6"
+          className="flex flex-col items-start"
         >
-          {/* Section Label */}
-          <div>
-            <span className="font-mono text-xs tracking-widest font-semibold text-[#1E1E1E] uppercase">
-              {section.label}
-            </span>
-          </div>
+          {/* 1. Section Label (Kicker) */}
+          <span className="font-mono text-xs font-bold tracking-[0.2em] text-[#1E1E1E] uppercase mb-2.5">
+            {section.label}
+          </span>
 
-          {/* Subheadline & Main Editorial Headline */}
-          <div className="space-y-2">
-            <p className="font-mono text-xs uppercase tracking-wider text-muted">
-              {section.subheadline}
-            </p>
-            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight text-[#1E1E1E] leading-[1.12]">
-              {section.headline}
-            </h1>
-          </div>
+          {/* 2. Main Editorial Headline */}
+          <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight text-[#1E1E1E] leading-[1.1] mb-3">
+            {section.headline}
+          </h1>
 
-          {/* Concise Body Description */}
-          <p className="text-base sm:text-lg text-muted leading-relaxed max-w-xl">
+          {/* 3. Subheadline (Subtitle) */}
+          <h2 className="text-base sm:text-lg font-medium text-[#3F3F46] tracking-tight mb-4">
+            {section.subheadline}
+          </h2>
+
+          {/* 4. Body Description */}
+          <p className="text-sm sm:text-base text-[#707070] leading-relaxed max-w-xl mb-7">
             {section.description}
           </p>
 
           {/* Contextual Action Button to open Modal */}
-          <div className="pt-2">
+          <div>
             <button
               onClick={onOpenModal}
               type="button"
-              className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1E1E1E] text-white text-xs font-mono uppercase tracking-wider font-medium hover:bg-black/80 active:scale-[0.98] transition-all shadow-card"
+              className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1E1E1E] text-white text-xs font-mono uppercase tracking-wider font-medium hover:bg-black/80 active:scale-[0.98] transition-all shadow-card cursor-pointer"
             >
               <span>{section.modalActionLabel}</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
